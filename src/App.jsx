@@ -96,7 +96,7 @@ const INITIAL_PROJECTS = [
 ];
 
 const STORAGE_KEY = 'abarca-go-tracker';
-const PIN = '9999';
+const PIN = '5689*';
 
 function loadState() {
   try {

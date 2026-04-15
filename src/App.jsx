@@ -540,7 +540,7 @@ export default function App() {
             </div>
             <input
               type="password"
-              maxLength={4}
+              maxLength={6}
               placeholder="••••"
               value={pinInput}
               onChange={(e) => {

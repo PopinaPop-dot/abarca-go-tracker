@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 
 // ─── CONFIG ──────────────────────────────────────────────────
-const PIN = '2999*'; // ← CAMBIÁ POR TU PIN REAL
+const PIN = '9999'; // ← CAMBIÁ POR TU PIN REAL
 const APPS_SCRIPT_URL = 'TU_URL_EXEC_ACÁ';
 const USE_BACKEND = APPS_SCRIPT_URL !== 'TU_URL_EXEC_ACÁ';
 

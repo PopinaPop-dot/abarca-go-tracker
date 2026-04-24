@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 
 // ─── CONFIG ──────────────────────────────────────────────────
-const PIN = '259999*'; // ← CAMBIÁ POR TU PIN REAL
+const PIN = '2999*'; // ← CAMBIÁ POR TU PIN REAL
 const APPS_SCRIPT_URL = 'TU_URL_EXEC_ACÁ';
 const USE_BACKEND = APPS_SCRIPT_URL !== 'TU_URL_EXEC_ACÁ';
 
@@ -27,25 +27,9 @@ const INITIAL_PROJECTS = [
       { id: 's07', text: 'S07: Probar URLs en celular Android', done: false, date: '2026-04-24' },
     ],
   },
-  // 🥇 PRIORIDAD 1
-  {
-    id: 'pop',
-    name: '📦 Abarca GO POP',
-    color: '#f97316',
-    hito: { label: 'Gestión POP en producción', scheduled: '2026-05-16', real: '' },
-    tasks: [
-      { id: 'p01', text: 'P01: Prototipo v1.3 validado en artifact', done: true, date: '2026-04-15' },
-      { id: 'p02', text: 'P02: Correcciones post-prueba celular', done: false, date: '2026-04-28' },
-      { id: 'p03', text: 'P03: Catálogo real 28 productos en Google Sheet', done: false, date: '2026-04-29' },
-      { id: 'p04', text: 'P04: Padrón de clientes cargado (500-2000)', done: false, date: '2026-04-30' },
-      { id: 'p05', text: 'P05: Backend Apps Script — pedidos + catálogo', done: false, date: '2026-05-05' },
-      { id: 'p06', text: 'P06: Alertas canal/categoría + comodato', done: false, date: '2026-05-07' },
-      { id: 'p07', text: 'P07: 4 roles funcionando (Usuario/Enlace/Gestor/Stocker)', done: false, date: '2026-05-12' },
-      { id: 'p08', text: 'P08: Offline + localStorage + semáforo sync', done: false, date: '2026-05-14' },
-      { id: 'p09', text: 'P09: Piloto con preventistas reales', done: false, date: '2026-05-16' },
-    ],
-  },
-  // 🥈 PRIORIDAD 2
+  // ═══════════════════════════════════════════════════════════
+  // 🥇 PRIORIDAD 1 — SPRINT IA (los 3 van en paralelo)
+  // ═══════════════════════════════════════════════════════════
   {
     id: 'cobranzas',
     name: '💰 Abarca GO Cobranzas',
@@ -64,7 +48,23 @@ const INITIAL_PROJECTS = [
       { id: 'c10', text: 'C10: Roles Tesorería + Cuentas Corrientes construidos', done: false, date: '2026-06-20' },
     ],
   },
-  // 🥉 PRIORIDAD 3
+  {
+    id: 'pop',
+    name: '📦 Abarca GO POP',
+    color: '#f97316',
+    hito: { label: 'Gestión POP en producción', scheduled: '2026-05-16', real: '' },
+    tasks: [
+      { id: 'p01', text: 'P01: Prototipo v1.3 validado en artifact', done: true, date: '2026-04-15' },
+      { id: 'p02', text: 'P02: Correcciones post-prueba celular', done: false, date: '2026-04-28' },
+      { id: 'p03', text: 'P03: Catálogo real 28 productos en Google Sheet', done: false, date: '2026-04-29' },
+      { id: 'p04', text: 'P04: Padrón de clientes cargado (500-2000)', done: false, date: '2026-04-30' },
+      { id: 'p05', text: 'P05: Backend Apps Script — pedidos + catálogo', done: false, date: '2026-05-05' },
+      { id: 'p06', text: 'P06: Alertas canal/categoría + comodato', done: false, date: '2026-05-07' },
+      { id: 'p07', text: 'P07: 4 roles funcionando (Usuario/Enlace/Gestor/Stocker)', done: false, date: '2026-05-12' },
+      { id: 'p08', text: 'P08: Offline + localStorage + semáforo sync', done: false, date: '2026-05-14' },
+      { id: 'p09', text: 'P09: Piloto con preventistas reales', done: false, date: '2026-05-16' },
+    ],
+  },
   {
     id: 'migracion',
     name: '📧 Migración Automática Emails',
@@ -85,7 +85,28 @@ const INITIAL_PROJECTS = [
       { id: 'm12', text: 'M12: Baja de 11 licencias Workspace (~USD 126/mes ahorrados)', done: false, date: '2026-06-30' },
     ],
   },
-  // 4️⃣ PRIORIDAD 4
+  // ═══════════════════════════════════════════════════════════
+  // 🥈 PRIORIDAD 2 — SIGUIENTE EN FILA
+  // ═══════════════════════════════════════════════════════════
+  {
+    id: 'recibos',
+    name: '🧾 Organizador Recibos Humand',
+    color: '#f59e0b',
+    hito: { label: 'v2.1 validada + empaquetada .exe', scheduled: '2026-05-30', real: '' },
+    tasks: [
+      { id: 'r01', text: 'R01: Correr v2.1 con los 402 PDFs reales', done: false, date: '2026-05-19' },
+      { id: 'r02', text: 'R02: Verificar que errores bajaron vs v2.0', done: false, date: '2026-05-19' },
+      { id: 'r03', text: 'R03: Validar 66 recibos sin firma con RRHH', done: false, date: '2026-05-20' },
+      { id: 'r04', text: 'R04: Revisar ~6 PDFs sin período detectado', done: false, date: '2026-05-20' },
+      { id: 'r05', text: 'R05: Verificar Salida A — por empleado (84 PDFs)', done: false, date: '2026-05-21' },
+      { id: 'r06', text: 'R06: Verificar Salida B — por mes', done: false, date: '2026-05-21' },
+      { id: 'r07', text: 'R07: Cruzar 84 empleados detectados vs nómina real (~90)', done: false, date: '2026-05-27' },
+      { id: 'r08', text: 'R08: Empaquetar como .exe para distribución sin Python', done: false, date: '2026-05-30' },
+    ],
+  },
+  // ═══════════════════════════════════════════════════════════
+  // 🥉 PRIORIDAD 3 — DESPUÉS
+  // ═══════════════════════════════════════════════════════════
   {
     id: 'visitas',
     name: '📍 Abarca GO Visitas',
@@ -102,37 +123,19 @@ const INITIAL_PROJECTS = [
       { id: 'vis08', text: 'VIS08: Correcciones post-piloto', done: false, date: '2026-05-30' },
     ],
   },
-  // ⏸️ EN PAUSA
   {
-    id: 'catalogo',
-    name: '🌐 Catálogo Combos Abarca',
-    color: '#0ea5e9',
-    hito: { label: 'Catálogo publicado con imágenes y hosting', scheduled: '2026-04-23', real: '2026-04-23' },
+    id: 'rondas',
+    name: '🔄 Control de Rondas QR',
+    color: '#14b8a6',
+    hito: { label: 'Sistema QR→Form→Sheets operativo en 5 locaciones', scheduled: '2026-06-20', real: '' },
     tasks: [
-      { id: 'cat01', text: 'CAT01: Diseño v2 construido y validado', done: true, date: '2026-04-17' },
-      { id: 'cat02', text: 'CAT02: 60+ combos del ERP cargados', done: true, date: '2026-04-17' },
-      { id: 'cat03', text: 'CAT03: Modo admin + exportar HTML funcionando', done: true, date: '2026-04-17' },
-      { id: 'cat04', text: 'CAT04: Hosting decidido y configurado', done: true, date: '2026-04-23' },
-      { id: 'cat05', text: 'CAT05: Logo real de Abarca en header', done: true, date: '2026-04-23' },
-      { id: 'cat06', text: 'CAT06: Imágenes combos cargadas', done: true, date: '2026-04-23' },
-      { id: 'cat07', text: 'CAT07: Filtro por stock disponibles', done: true, date: '2026-04-23' },
-      { id: 'cat08', text: 'CAT08: Publicado y probado', done: true, date: '2026-04-23' },
-    ],
-  },
-  {
-    id: 'recibos',
-    name: '🧾 Organizador Recibos Humand',
-    color: '#f59e0b',
-    hito: { label: 'v2.1 validada + empaquetada .exe', scheduled: '2026-05-30', real: '' },
-    tasks: [
-      { id: 'r01', text: 'R01: Correr v2.1 con los 402 PDFs reales', done: false, date: '2026-05-19' },
-      { id: 'r02', text: 'R02: Verificar que errores bajaron vs v2.0', done: false, date: '2026-05-19' },
-      { id: 'r03', text: 'R03: Validar 66 recibos sin firma con RRHH', done: false, date: '2026-05-20' },
-      { id: 'r04', text: 'R04: Revisar ~6 PDFs sin período detectado', done: false, date: '2026-05-20' },
-      { id: 'r05', text: 'R05: Verificar Salida A — por empleado (84 PDFs)', done: false, date: '2026-05-21' },
-      { id: 'r06', text: 'R06: Verificar Salida B — por mes', done: false, date: '2026-05-21' },
-      { id: 'r07', text: 'R07: Cruzar 84 empleados detectados vs nómina real (~90)', done: false, date: '2026-05-27' },
-      { id: 'r08', text: 'R08: Empaquetar como .exe para distribución sin Python', done: false, date: '2026-05-30' },
+      { id: 'rq01', text: 'RQ01: Definir puntos de control por locación (5 sucursales)', done: false, date: '2026-05-26' },
+      { id: 'rq02', text: 'RQ02: Diseñar Google Form con campos requeridos', done: false, date: '2026-05-27' },
+      { id: 'rq03', text: 'RQ03: Generar QR codes por punto de control', done: false, date: '2026-05-28' },
+      { id: 'rq04', text: 'RQ04: Configurar Google Sheet receptora + dashboard', done: false, date: '2026-06-02' },
+      { id: 'rq05', text: 'RQ05: Imprimir y colocar QR en locaciones', done: false, date: '2026-06-06' },
+      { id: 'rq06', text: 'RQ06: Capacitar guardias + prueba piloto 1 semana', done: false, date: '2026-06-13' },
+      { id: 'rq07', text: 'RQ07: Ajustes post-piloto + go-live 5 locaciones', done: false, date: '2026-06-20' },
     ],
   },
   {
@@ -150,9 +153,28 @@ const INITIAL_PROJECTS = [
       { id: 'v07', text: 'V07: Publicar y entregar al equipo', done: false, date: '2026-06-13' },
     ],
   },
+  // ═══════════════════════════════════════════════════════════
+  // ✅ COMPLETADOS
+  // ═══════════════════════════════════════════════════════════
+  {
+    id: 'catalogo',
+    name: '🌐 Catálogo Combos Abarca',
+    color: '#0ea5e9',
+    hito: { label: 'Catálogo publicado con imágenes y hosting', scheduled: '2026-04-23', real: '2026-04-23' },
+    tasks: [
+      { id: 'cat01', text: 'CAT01: Diseño v2 construido y validado', done: true, date: '2026-04-17' },
+      { id: 'cat02', text: 'CAT02: 60+ combos del ERP cargados', done: true, date: '2026-04-17' },
+      { id: 'cat03', text: 'CAT03: Modo admin + exportar HTML funcionando', done: true, date: '2026-04-17' },
+      { id: 'cat04', text: 'CAT04: Hosting decidido y configurado', done: true, date: '2026-04-23' },
+      { id: 'cat05', text: 'CAT05: Logo real de Abarca en header', done: true, date: '2026-04-23' },
+      { id: 'cat06', text: 'CAT06: Imágenes combos cargadas', done: true, date: '2026-04-23' },
+      { id: 'cat07', text: 'CAT07: Filtro por stock disponibles', done: true, date: '2026-04-23' },
+      { id: 'cat08', text: 'CAT08: Publicado y probado', done: true, date: '2026-04-23' },
+    ],
+  },
 ];
 
-const STORAGE_KEY = 'abarca-go-tracker-v3';
+const STORAGE_KEY = 'abarca-go-tracker-v4';
 
 function loadLocal() {
   try {
@@ -249,20 +271,6 @@ function dateStatus(iso) {
   if (d < today) return 'overdue';
   if (d.getTime() === today.getTime()) return 'today';
   return 'future';
-}
-
-function getWeekDays() {
-  const today = new Date(); today.setHours(0, 0, 0, 0);
-  const day = today.getDay();
-  const monday = new Date(today);
-  monday.setDate(today.getDate() - (day === 0 ? 6 : day - 1));
-  const days = [];
-  for (let i = 0; i < 7; i++) {
-    const d = new Date(monday);
-    d.setDate(monday.getDate() + i);
-    days.push(d);
-  }
-  return days;
 }
 
 function toISO(date) {
@@ -626,7 +634,7 @@ export default function App() {
     <div style={{ minHeight: '100vh', background: '#f1f5f9', fontFamily: "'Inter', 'Segoe UI', system-ui, sans-serif" }}>
       <header style={{ background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)', color: '#fff', padding: '20px 24px', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
         <div style={{ flex: 1, minWidth: 200 }}>
-          <h1 style={{ margin: 0, fontSize: 20, fontWeight: 800, letterSpacing: 0.5 }}>ABARCA GO — Tracker de Proyectos</h1>
+          <h1 style={{ margin: 0, fontSize: 20, fontWeight: 800, letterSpacing: 0.5 }}>ABARCA GO — Tracker v4.0</h1>
           <div style={{ marginTop: 8, display: 'flex', alignItems: 'center', gap: 10 }}>
             <ProgressBar value={gPct} height={8} />
             <span style={{ fontWeight: 700, fontSize: 14, color: progressColor(gPct), minWidth: 40 }}>{gPct}%</span>
@@ -645,7 +653,7 @@ export default function App() {
         </button>
       </header>
 
-      {/* Tabs — agenda solo visible para admin */}
+      {/* Tabs */}
       <div style={{ background: '#fff', borderBottom: '1px solid #e2e8f0', display: 'flex', gap: 0, padding: '0 24px' }}>
         <button onClick={() => setActiveTab('projects')}
           style={{ padding: '12px 20px', border: 'none', borderBottom: activeTab === 'projects' ? '2px solid #6366f1' : '2px solid transparent', background: 'none', cursor: 'pointer', fontSize: 13, fontWeight: 600, color: activeTab === 'projects' ? '#6366f1' : '#64748b', display: 'flex', alignItems: 'center', gap: 6 }}>
@@ -672,8 +680,8 @@ export default function App() {
             {[...projects]
               .sort((a, b) => {
                 const pa = pct(a.tasks), pb = pct(b.tasks);
-                if (pa === 100 && pb !== 100) return -1;
-                if (pb === 100 && pa !== 100) return 1;
+                if (pa === 100 && pb !== 100) return 1;
+                if (pb === 100 && pa !== 100) return -1;
                 return 0;
               })
               .map(project => (
